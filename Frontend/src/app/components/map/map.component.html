@@ -1,0 +1,23 @@
+
+<div class="container">
+  <table border="1px" class="table table-striped">
+    <tr class="thead-dark">
+      <th>Train Name</th>
+      <th>Longitude</th>
+      <th>Latitude</th>
+      <th>More details</th>
+    </tr>
+    <tr >
+      <td>{{(items | async)?.UserName}}</td>
+      <td>{{(items | async)?.longitude}}</td>
+      <td>{{(items | async)?.latitude}}</td>
+      <td><button  type="button" class="btn btn-danger">Click me</button></td>
+    <!-- <tr *ngFor = "let y of items | async">
+      <td>{{y | json}}</td>
+      <td>{{y.description}}</td>
+      <td><button  type="button" class="btn btn-danger">Click me</button></td> -->
+    </tr>
+  </table>
+  </div>
+
+
