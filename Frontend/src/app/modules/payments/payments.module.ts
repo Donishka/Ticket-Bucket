@@ -6,12 +6,15 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { PurchaseTicketComponent } from '../../../app/components/purchase-ticket/purchase-ticket.component';
 
+import { QRCodeModule } from 'angularx-qrcode';
+
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     FlashMessagesModule,
     RouterModule,
+    QRCodeModule
   ],
   declarations: [PurchaseTicketComponent],
   exports: [PurchaseTicketComponent],

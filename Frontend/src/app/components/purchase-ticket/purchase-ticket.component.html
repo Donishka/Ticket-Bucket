@@ -1,4 +1,6 @@
-
+<div class ='container-fluid'>
+  <div class = 'row'>
+    <div class ='col col_2'>
       <div class="main-login main-center">
         <form #userForm="ngForm" (ngSubmit)="onSubmit(userForm)" method="POST" target="_blank" action="https://sandbox.payhere.lk/pay/checkout" #form>
           <fieldset>
@@ -76,24 +78,24 @@
             </div>
           </fieldset>
         </form>
-        <!--form method="POST" target="_blank" action="https://sandbox.payhere.lk/pay/checkout" #form>
-          <input type="hidden" name="merchant_id" value="1211720">
-          <input type="hidden" name="return_url" value="http://sample.com/return">
-          <input type="hidden" name="cancel_url" value="http://sample.com/cancel">
-          <input type="hidden" name="notify_url" value="http://sample.com/notify">
-          <br><br>Item Details<br>
-          <input type="text" name="order_id" value="ItemNo12345">
-          <input type="text" name="items" value="Door bell wireless"><br>
-          <input type="text" name="currency" value="LKR">
-          <input type="text" name="amount" value="1000">
-          <br><br>Customer Details<br>
-          <input type="text" name="first_name" value="Saman">
-          <input type="text" name="last_name" value="Perera"><br>
-          <input type="text" name="email" value="samanp@gmail.com">
-          <input type="text" name="phone" value="0771234567"><br>
-          <input type="text" name="address" value="No.1, Galle Road">
-          <input type="text" name="city" value="Colombo">
-          <input type="hidden" name="country" value="Sri Lanka"><br><br>
-          <button type="submit" (click)="form.submit()">Search</button>
-        </form-->
       </div>
+      </div>
+      <div class ='col col_2'>
+        <div class="main-login main-center">
+            <button class="btn btn-primary btn-lg btn-block login-button" type="submit" (click)="form.submit()" [disabled]="!userForm.valid">Pay Online</button>
+            <button class="btn btn-primary btn-lg btn-block login-button" [disabled]="!userForm.valid">Pay with Ez Cash</button>
+            <button class="btn btn-primary btn-lg btn-block login-button" type="button" (click)="resetForm(userForm)">Reset</button>
+        <br>
+        <br>
+            <qrcode [qrdata]="qrMsg" [size]="300" [level]="'H'" ></qrcode>
+            <ul>
+              <li>
+                
+              </li>
+            </ul>
+            
+      </div>
+    </div>
+  </div>
+  
+     

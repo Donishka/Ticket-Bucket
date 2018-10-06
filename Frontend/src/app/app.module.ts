@@ -45,12 +45,6 @@ import { QRCodeModule } from 'angularx-qrcode';
     FormsModule,
     MapModule,
     QRCodeModule
-<<<<<<< HEAD
-    
-    
-=======
-
->>>>>>> 88c06b158035737f57e40994e5e0936705461101
   ],
   providers: [AuthService],
   bootstrap: [AppComponent]

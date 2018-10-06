@@ -17,6 +17,7 @@ declare var M: any;
 })
 export class PurchaseTicketComponent implements OnInit {
   user:any;
+  qrMsg: String="Sample";
   constructor(
     
     public purchaseTicketService: PurchaseTicketService,
@@ -63,9 +64,15 @@ export class PurchaseTicketComponent implements OnInit {
       this.purchaseTicketService.postPurchase(form.value).subscribe((res) => {
         this.flashMessage.show('Purchased', { cssClass: 'alert-success', timeout: 4000 });
         this.resetForm1(form);
+        this.qrMsg = "Start station: "+form.value.start+
+                      " End station: "+form.value.end+
+                      " Date: "+form.value.date+
+                      " Price: "+form.value.cost+
+                      " id: "+form.value.buyerid+
+                      " class: "+form.value.class ;
         
-        this.router.navigateByUrl('https://sandbox.payhere.lk/pay/checkout');
-      });
+
+        });
   }
 
   getProfileDetails() {
