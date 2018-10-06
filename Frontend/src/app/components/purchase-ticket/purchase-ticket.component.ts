@@ -18,6 +18,7 @@ declare var M: any;
 export class PurchaseTicketComponent implements OnInit {
   user:any;
   ticketDetails:any=null;
+
   qrMsg: String="Sample";
   constructor(
     
@@ -71,8 +72,9 @@ export class PurchaseTicketComponent implements OnInit {
                       " Price: "+form.value.cost+
                       " id: "+form.value.buyerid+
                       " class: "+form.value.class ;
-        
+
         this.ticketDetails=this.qrMsg;
+
         });
   }
 
