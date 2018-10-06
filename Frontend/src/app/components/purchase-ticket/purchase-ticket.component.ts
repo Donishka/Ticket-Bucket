@@ -18,6 +18,9 @@ export class PurchaseTicketComponent implements OnInit {
   ticketDetails:any=null;
   arr:any[];
   qrMsg: String="Sample";
+
+  today: number = Date.now();
+  time:any;
   constructor(
     
     public purchaseTicketService: PurchaseTicketService,
@@ -27,7 +30,7 @@ export class PurchaseTicketComponent implements OnInit {
 
   ngOnInit() {
     this.resetForm();
-    this.getProfileDetails();
+    this.getProfileDetails(); 
   }
 
   resetForm(form?: NgForm) {
@@ -69,7 +72,8 @@ export class PurchaseTicketComponent implements OnInit {
         this.qrMsg =  " Start station:"+form.value.start+
                       " End station: "+form.value.end+
                       " Date: "+form.value.date+
-                      " Price: "+form.value.cost+
+                      " Price: 135"+
+                      " time: " + form.value.time+
                       " id: "+form.value.buyerid+
                       " class: "+form.value.class+
                       " Qty: " + form.value.qty ;
@@ -78,7 +82,8 @@ export class PurchaseTicketComponent implements OnInit {
         this.arr = ["Start station : " + form.value.start,
           " End station : " + form.value.end ,
           " Date : " + form.value.date ,
-          " Price : " + form.value.cost ,
+          " Price : 135",
+          " time: "+form.value.time,
           " class : " + form.value.class,
           " Qty: " + form.value.qty];
         });
