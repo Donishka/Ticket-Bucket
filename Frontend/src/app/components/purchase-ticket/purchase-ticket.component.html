@@ -15,7 +15,7 @@
             <input type="hidden" name="order_id" value={{user._id}}>
             <input type="hidden" name="items" value="Train Ticket"><br>
             <input type="hidden" name="currency" value="LKR">
-            <input type="text" name="amount" value="135">
+            <input type="hidden" name="amount" value="135">
 
             <input type="hidden" name="first_name" value="{{user.fname}}">
             <input type="hidden" name="last_name" value="{{user.lname}}"><br>
@@ -76,7 +76,7 @@
             </div>
 
             <div class="form-group">
-              <input type="hidden" class="form-control" name="time" #name="ngModel" value="22.05" [(ngModel)]="purchaseTicketService.selectedPurchase.time">
+              <input type="hidden" class="form-control" name="time" #name="ngModel" value="{{today | date:'medium'}}" [(ngModel)]=today>
             </div>
             <div class="form-group">
               <input type="hidden" class="form-control" name="cost" #name="ngModel" [(ngModel)]="purchaseTicketService.selectedPurchase.cost">
@@ -86,10 +86,8 @@
             </div>
             <flash-messages></flash-messages>
             <div class="form-group ">
-              <button class="btn btn-primary btn-lg btn-block login-button" type="submit" (click)="form.submit()"
-                [disabled]="!userForm.valid">Pay Online</button>
-              <button class="btn btn-primary btn-lg btn-block login-button" [disabled]="!userForm.valid">Pay with Ez
-                Cash</button>
+              <button class="btn btn-primary btn-lg btn-block login-button" type="submit" (click)="form.submit()" [disabled]="!userForm.valid">Pay Online</button>
+              <button class="btn btn-primary btn-lg btn-block login-button" [disabled]="!userForm.valid">Pay with Ez Cash</button>
               <button class="btn btn-primary btn-lg btn-block login-button" type="button" (click)="resetForm(userForm)">Reset</button>
             </div>
           </fieldset>
@@ -101,6 +99,7 @@
         <button class="btn btn-primary btn-lg btn-block login-button" [routerLink]="['/view-map']">Get Live Location</button>
         <button class="btn btn-primary btn-lg btn-block login-button">Train Shedule</button>
         <button class="btn btn-primary btn-lg btn-block login-button" [routerLink]="['/train-fee']">Price List</button>
+        <button class="btn btn-primary btn-lg btn-block login-button" [routerLink]="['/view-purchases']">View Purchase History</button>
         <br>
         <br>
         <div align="center">

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AngularFireDatabase } from '@angular/fire/database';
 import { Observable } from 'rxjs';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-map',
@@ -24,6 +25,11 @@ export class MapComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.reload();
+  }
+
+  reload(){
+    this.router.navigateByUrl('/view-map');
   }
 
 }
