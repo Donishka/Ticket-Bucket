@@ -37,6 +37,7 @@
     "mongodb": "^2.2.33",
     "mongoose": "^5.2.9",
     "ngx-bootstrap": "^3.0.1",
+    "ngx-typeahead": "^6.2.0",
     "popper.js": "^1.14.3",
     "rxjs": "^5.5.6",
     "zone.js": "^0.8.19"

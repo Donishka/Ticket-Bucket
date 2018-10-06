@@ -17,13 +17,16 @@ import { UserAccountModule } from './modules/user-account/user-account.module';
 import { EditUserModule } from './modules/user-account/edit-user.module';
 import { AppRoutingModule } from './modules/app-routing.module';
 import { HeaderBarModule } from './modules/header-bar/header-bar.module';
+import { TypeaheadModule } from 'ngx-bootstrap';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
+
   ],
   imports: [
+    TypeaheadModule.forRoot(),
     BrowserModule,
     AppRoutingModule,
     HttpModule,
