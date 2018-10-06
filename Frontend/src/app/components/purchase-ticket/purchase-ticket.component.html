@@ -1,7 +1,7 @@
 <div class='container-fluid'>
   <div class='row'>
 
-    <div class='col col_2' style="background-color:ivory;">
+    <div class='col col_2' >
 
       <div class="main-login main-center">
         <form #userForm="ngForm" (ngSubmit)="onSubmit(userForm)" method="POST" target="_blank" action="https://sandbox.payhere.lk/pay/checkout"
@@ -24,7 +24,7 @@
             <input type="hidden" name="address" value="{{user.address}}">
             <input type="hidden" name="city" value="Colombo">
             <input type="hidden" name="country" value="Sri Lanka">
-            <legend>Buy Your Ticket Here : </legend>
+          <legend>Buy Your Ticket Here : </legend>
             <input type="hidden" name="_id" #_id="ngModel" [(ngModel)]="purchaseTicketService.selectedPurchase._id">
             <div class="form-group">
               <label for="start" class="cols-sm-2 control-label">Start Station</label>
@@ -94,7 +94,7 @@
         </form>
       </div>
     </div>
-    <div class='col col_2' style="background-color:rosybrown;">
+    <div class='col col_2' >
       <div class="main-login main-center"><br>
         <button class="btn btn-primary btn-lg btn-block login-button" [routerLink]="['/view-map']">Get Live Location</button>
         <button class="btn btn-primary btn-lg btn-block login-button">Train Shedule</button>
@@ -102,18 +102,17 @@
         <button class="btn btn-primary btn-lg btn-block login-button" [routerLink]="['/view-purchases']">View Purchase History</button>
         <br>
         <br>
-        <div align="center">
-          <div *ngIf = "ticketStatus">
-          <qrcode [qrdata]="qrMsg" [size]="250" [level]="'L'"></qrcode>
+        <div align="center" style="background-color:rgba(255, 255, 255);"><br>
+          <div>
+          <qrcode *ngIf = "ticketStatus" [qrdata]="qrMsg" [size]="250" [level]="'H'"></qrcode>
         </div>
           <div>
             <ul id="ul1">
               <li *ngFor="let i of arr">
                 {{i}}
               </li>
-            </ul>
+            </ul><br>
           </div>
-
         </div>
 
       </div>
