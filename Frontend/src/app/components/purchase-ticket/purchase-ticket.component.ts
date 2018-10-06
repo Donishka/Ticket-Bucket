@@ -15,6 +15,7 @@ declare var M: any;
 })
 export class PurchaseTicketComponent implements OnInit {
   user:any;
+  ticketStatus: boolean = false;
   ticketDetails:any=null;
   arr:any[];
   qrMsg: String="Sample";
@@ -86,6 +87,7 @@ export class PurchaseTicketComponent implements OnInit {
           " time: "+form.value.time,
           " class : " + form.value.class,
           " Qty: " + form.value.qty];
+          this.ticketStatus = true;
         });
   }
 
