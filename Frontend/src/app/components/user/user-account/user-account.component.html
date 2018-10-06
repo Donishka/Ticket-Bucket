@@ -1,17 +1,12 @@
-<app-header-bar></app-header-bar>
 <div class="container-fluid" id="body-container-fluid">
   <div class="row">
     <div class="col-lg-4">
       <div class="card" style="width:100%">
-        <img class="card-img-top" src="https://lh3.googleusercontent.com/a8_ujXr3VWHstGkxgJL1TkqfrytP4r_52QhcvqRQVaQPRQ9DHdQ6seI99qc4jLjC0WDM=h900" alt="Card image"  style="width:100%">
+        <img class="card-img-top" src="https://lh3.googleusercontent.com/a8_ujXr3VWHstGkxgJL1TkqfrytP4r_52QhcvqRQVaQPRQ9DHdQ6seI99qc4jLjC0WDM=h900"
+          alt="Card image" style="width:100%">
         <div class="card-body">
           <h4 class="card-title">{{user.fname}} {{user.lname}}</h4>
-          <ul class="list-inline" id="courses">
-            <li class="list-inline-item">
-              <i class="fa fa-user"></i>User Name :  {{user.username}}
-            </li>            
-          </ul>
-          <div class="address">								
+          <div class="address">
             <ul class="w3-ul w3-small">
               <br>
               <li><i class="fas fa-envelope" aria-hidden="true"></i>Email : {{user.email}}</li><br>
@@ -23,5 +18,19 @@
         </div>
       </div>
     </div>
-    <div class="col-lg-8" style="background-color:lightblue;">
-    <br><br>
+
+    <div class="col-lg-4" style="background-color:lightblue;">
+      <br>
+      <div class='container-fluid'>
+        <app-purchase-ticket></app-purchase-ticket>
+      </div>
+    </div>
+    <div class="col-lg-4" >
+      <br>
+      <div class='container-fluid' style="background-color:lightgoldenrodyellow;">
+        <button class="btn btn-primary btn-lg btn-block login-button" type="button">Get Locations Of Trains</button><br>
+        <button class="btn btn-primary btn-lg btn-block login-button" type="button">Train Shedule</button><br>
+        <button class="btn btn-primary btn-lg btn-block login-button" type="button">Purchase History</button>
+      </div>
+    </div>
+

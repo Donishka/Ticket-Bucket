@@ -15,7 +15,6 @@ import { SigninModule } from './modules/signin/signin.module';
 import { SignupModule } from './modules/signup/signup.module';
 import { UserAccountModule } from './modules/user-account/user-account.module';
 import { EditUserModule } from './modules/user-account/edit-user.module';
-import { ViewUserModule } from './modules/user-account/view-user.module';
 import { AppRoutingModule } from './modules/app-routing.module';
 import { HeaderBarModule } from './modules/header-bar/header-bar.module';
 import { MapModule } from './modules/map/map.module';
@@ -29,7 +28,7 @@ import { QRCodeModule } from 'angularx-qrcode';
   declarations: [
     AppComponent,
     HomeComponent,
-    
+
   ],
   imports: [
     BrowserModule,
@@ -42,13 +41,16 @@ import { QRCodeModule } from 'angularx-qrcode';
     SignupModule,
     UserAccountModule,
     EditUserModule,
-    ViewUserModule,
     HeaderBarModule,
     FormsModule,
     MapModule,
     QRCodeModule
+<<<<<<< HEAD
     
     
+=======
+
+>>>>>>> 88c06b158035737f57e40994e5e0936705461101
   ],
   providers: [AuthService],
   bootstrap: [AppComponent]

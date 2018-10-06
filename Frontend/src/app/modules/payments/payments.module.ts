@@ -2,21 +2,18 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { FlashMessagesModule } from 'angular2-flash-messages';
-import { RouterModule, Routes }  from '@angular/router';
+import { RouterModule, Routes } from '@angular/router';
 
-import { ViewUsersComponent } from '../../components/user/view-user/view-user.component';
+import { PurchaseTicketComponent } from '../../../app/components/purchase-ticket/purchase-ticket.component';
+
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     FlashMessagesModule,
     RouterModule,
- ],
-  declarations: [
-    ViewUsersComponent
   ],
-  exports:[
-    ViewUsersComponent
-  ]
+  declarations: [PurchaseTicketComponent],
+  exports: [PurchaseTicketComponent],
 })
-export class ViewUserModule { }
+export class PaymentsModule { }

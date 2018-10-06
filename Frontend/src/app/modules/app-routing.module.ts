@@ -4,7 +4,6 @@ import { AuthGuard } from '../services/auth.guard';
 
 import { HomeComponent } from '../components/home/home.component';
 import { LoginComponent } from '../components/login/login.component';
-import { ViewUsersComponent } from '../components/user/view-user/view-user.component';
 import { AddNewUserComponent } from '../components/user/add-new-user/add-new-user.component';
 import { UserAccountComponent } from '../components/user/user-account/user-account.component';
 import { EditUserComponent } from '../components/user/edit-user/edit-user.component';
@@ -13,7 +12,6 @@ import { MapComponent } from '../components/map/map.component';
 const applicationRoutes:Routes = [
   {path:'login',component:LoginComponent},
   {path:'',component:HomeComponent},
-  {path:'viewuser',component:ViewUsersComponent,canActivate: [AuthGuard]},
   {path:'addnewuser',component:AddNewUserComponent},
   {path:'edituser',component:EditUserComponent,canActivate: [AuthGuard]},
   {path:'user-account',component:UserAccountComponent,canActivate: [AuthGuard]},
