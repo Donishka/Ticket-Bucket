@@ -7,8 +7,11 @@ import { Observable } from 'rxjs';
   templateUrl: './map.component.html',
   styleUrls: ['./map.component.css']
 })
+
 export class MapComponent implements OnInit {
+ 
   
+ 
   lat: number = 6.9021297;
   lng: number = 79.8610308;
 
@@ -16,6 +19,7 @@ export class MapComponent implements OnInit {
 
   
   constructor(private db: AngularFireDatabase) { 
+    this.items = db.object('position').valueChanges();
     db.object('/position').valueChanges()
     .subscribe(res => {
       this.lat = res.latitude;
