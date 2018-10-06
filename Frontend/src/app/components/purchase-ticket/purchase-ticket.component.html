@@ -103,7 +103,9 @@
         <br>
         <br>
         <div align="center">
+          <div *ngIf = "ticketStatus">
           <qrcode [qrdata]="qrMsg" [size]="250" [level]="'H'"></qrcode>
+        </div>
           <div>
             <ul id="ul1">
               <li *ngFor="let i of arr">
