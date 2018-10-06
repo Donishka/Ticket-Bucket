@@ -70,13 +70,17 @@ export class PurchaseTicketComponent implements OnInit {
                       " Price: "+form.value.cost+
                       " id: "+form.value.buyerid+
                       " class: "+form.value.class ;
-        
+
         this.ticketDetails=this.qrMsg;
+<<<<<<< HEAD
         this.arr = ["Start station : " + form.value.start,
           " End station : " + form.value.end ,
           " Date : " + form.value.date ,
           " Price : " + form.value.cost ,
           " class : " + form.value.class];
+=======
+
+>>>>>>> 9d726c4d5ec27997161fb0418e100634ed7e81f2
         });
   }
 

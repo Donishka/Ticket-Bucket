@@ -21,7 +21,6 @@ import { MapModule } from './modules/map/map.module';
 
 
 
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -41,8 +40,8 @@ import { MapModule } from './modules/map/map.module';
     EditUserModule,
     HeaderBarModule,
     FormsModule,
-    MapModule
-    
+    MapModule,
+    QRCodeModule
 
   ],
   providers: [AuthService],
