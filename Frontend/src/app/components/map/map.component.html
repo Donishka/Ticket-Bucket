@@ -1,21 +1,49 @@
-
-<div class="container">
-  <table border="1px" class="table table-striped">
-    <tr class="thead-dark">
-      <th>Train Name</th>
-      <th>Longitude</th>
-      <th>Latitude</th>
-      <th>More details</th>
-    </tr>
-    <tr >
-      <td>{{(items | async)?.UserName}}</td>
-      <td>{{(items | async)?.longitude}}</td>
-      <td>{{(items | async)?.latitude}}</td>
-      <td><button  type="button" class="btn btn-danger">Click me</button></td>
-    </tr>
-  </table>
+<div class='container-fluid'>
+  <div class='row'>
+    <div class="col-lg-6" style="background-color:peachpuff;">
+      <div class="container"><br>
+        <form>
+          <legend>Search For Train</legend>
+          <fieldset>
+            <div class="form-group">
+              <label for="end" class="cols-sm-2 control-label">Destination</label>
+              <div class="cols-sm-10">
+                <div class="input-group">
+                  <span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
+                  <input type="text" class="form-control">
+                </div>
+              </div>
+            </div>
+            <button class="btn btn-primary btn-lg btn-block login-button" type="button">Search</button><br>
+          </fieldset>
+        </form>
+        <table border="1px" class="table table-striped table-condensed">
+          <tr class="thead-dark">
+            <th>Train Name</th>
+            <th>Longitude</th>
+            <th>Latitude</th>
+            <th>More details</th>
+          </tr>
+          <tr >
+            <td>{{(items | async)?.UserName}}</td>
+            <td>{{(items | async)?.longitude}}</td>
+            <td>{{(items | async)?.latitude}}</td>
+            <td><button  type="button" class="btn btn-danger">Click me</button></td>
+          </tr>
+        </table>
+        </div>
+        <input type="text" value="{{(qlng | async)}}">
+      <div class="main-login main-center">
+      </div>
+    </div>
+    <div class="col-lg-6" style="background-color:rosybrown;">
+      <div class="main-login main-center"><br>       
+        <!--map-->
+      </div>
+    </div>
   </div>
-  <input type="text" value="{{(qlng | async)}}">
+
+
 
 
 

@@ -6,6 +6,7 @@ export class Purchase {
     time: string;
     class: string;
     cost: string;
+    qty:string;
     buyerid: string;
 
 }
