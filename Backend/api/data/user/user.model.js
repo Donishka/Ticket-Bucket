@@ -9,10 +9,7 @@ var User =  mongoose.model('User', {
         type:String,
         required:true
     },
-    username:{
-        type:String,
-		required:true
-    },
+
     password : {
         type:String,
         required:true
@@ -25,9 +22,7 @@ var User =  mongoose.model('User', {
     address:{
         type:String,
     },
-    isadmin:{
-        type:Boolean,
-    },
+
     profilepic:{
         type:String,
     },

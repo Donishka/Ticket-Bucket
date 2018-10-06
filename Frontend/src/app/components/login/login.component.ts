@@ -43,5 +43,9 @@ export class LoginComponent implements OnInit {
         }
     })
   }
+
+  getUrl() {
+    return "url('../../../../source/images/train1.jpg')";
+  }
   
 }
