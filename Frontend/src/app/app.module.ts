@@ -17,7 +17,10 @@ import { UserAccountModule } from './modules/user-account/user-account.module';
 import { EditUserModule } from './modules/user-account/edit-user.module';
 import { AppRoutingModule } from './modules/app-routing.module';
 import { HeaderBarModule } from './modules/header-bar/header-bar.module';
-import { TypeaheadModule } from 'ngx-bootstrap';
+import { MapModule } from './modules/map/map.module';
+
+
+
 
 @NgModule({
   declarations: [
@@ -26,7 +29,6 @@ import { TypeaheadModule } from 'ngx-bootstrap';
 
   ],
   imports: [
-    TypeaheadModule.forRoot(),
     BrowserModule,
     AppRoutingModule,
     HttpModule,
@@ -38,7 +40,10 @@ import { TypeaheadModule } from 'ngx-bootstrap';
     UserAccountModule,
     EditUserModule,
     HeaderBarModule,
-    FormsModule   
+    FormsModule,
+    MapModule
+    
+
   ],
   providers: [AuthService],
   bootstrap: [AppComponent]

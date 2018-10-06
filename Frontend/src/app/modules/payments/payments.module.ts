@@ -3,10 +3,10 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { FlashMessagesModule } from 'angular2-flash-messages';
 import { RouterModule, Routes } from '@angular/router';
-import { TypeaheadModule } from 'ngx-bootstrap';
-
 
 import { PurchaseTicketComponent } from '../../../app/components/purchase-ticket/purchase-ticket.component';
+
+import { QRCodeModule } from 'angularx-qrcode';
 
 @NgModule({
   imports: [
@@ -14,8 +14,7 @@ import { PurchaseTicketComponent } from '../../../app/components/purchase-ticket
     FormsModule,
     FlashMessagesModule,
     RouterModule,
-    TypeaheadModule.forRoot(),
-
+    QRCodeModule
   ],
   declarations: [PurchaseTicketComponent],
   exports: [PurchaseTicketComponent],

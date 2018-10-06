@@ -4,6 +4,7 @@ import { FlashMessagesService } from 'angular2-flash-messages';
 import { Router } from '@angular/router';
 import { AuthService } from '../../services/auth.service';
 
+
 import { PurchaseTicketService } from '../../services/purchase-ticket-service/purchase-ticket.service';
 
 declare var M: any;
@@ -14,64 +15,10 @@ declare var M: any;
   styleUrls: ['./purchase-ticket.component.css'],
   providers:[PurchaseTicketService]
 })
-
 export class PurchaseTicketComponent implements OnInit {
-  selected: string;
-  states: string[] = [
-    'Alabama',
-    'Alaska',
-    'Arizona',
-    'Arkansas',
-    'California',
-    'Colorado',
-    'Connecticut',
-    'Delaware',
-    'Florida',
-    'Georgia',
-    'Hawaii',
-    'Idaho',
-    'Illinois',
-    'Indiana',
-    'Iowa',
-    'Kansas',
-    'Kentucky',
-    'Louisiana',
-    'Maine',
-    'Maryland',
-    'Massachusetts',
-    'Michigan',
-    'Minnesota',
-    'Mississippi',
-    'Missouri',
-    'Montana',
-    'Nebraska',
-    'Nevada',
-    'New Hampshire',
-    'New Jersey',
-    'New Mexico',
-    'New York',
-    'North Dakota',
-    'North Carolina',
-    'Ohio',
-    'Oklahoma',
-    'Oregon',
-    'Pennsylvania',
-    'Rhode Island',
-    'South Carolina',
-    'South Dakota',
-    'Tennessee',
-    'Texas',
-    'Utah',
-    'Vermont',
-    'Virginia',
-    'Washington',
-    'West Virginia',
-    'Wisconsin',
-    'Wyoming'
-  ];
-
-
   user:any;
+  ticketDetails:any=null;
+  qrMsg: String="Sample";
   constructor(
     
     public purchaseTicketService: PurchaseTicketService,
@@ -118,9 +65,15 @@ export class PurchaseTicketComponent implements OnInit {
       this.purchaseTicketService.postPurchase(form.value).subscribe((res) => {
         this.flashMessage.show('Purchased', { cssClass: 'alert-success', timeout: 4000 });
         this.resetForm1(form);
+        this.qrMsg = "Start station: "+form.value.start+
+                      " End station: "+form.value.end+
+                      " Date: "+form.value.date+
+                      " Price: "+form.value.cost+
+                      " id: "+form.value.buyerid+
+                      " class: "+form.value.class ;
         
-        this.router.navigateByUrl('https://sandbox.payhere.lk/pay/checkout');
-      });
+        this.ticketDetails=this.qrMsg;
+        });
   }
 
   getProfileDetails() {
