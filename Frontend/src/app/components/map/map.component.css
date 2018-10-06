@@ -3,3 +3,9 @@ agm-map {
   }
   :host, google-map 
   {display:block; width: inherit; height: inherit}
+
+#map {
+    height: 400px;
+    width:100%;
+    background-color: grey;
+}
