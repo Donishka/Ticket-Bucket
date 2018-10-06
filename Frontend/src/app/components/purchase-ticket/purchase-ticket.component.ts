@@ -4,11 +4,9 @@ import { FlashMessagesService } from 'angular2-flash-messages';
 import { Router } from '@angular/router';
 import { AuthService } from '../../services/auth.service';
 
-
 import { PurchaseTicketService } from '../../services/purchase-ticket-service/purchase-ticket.service';
 
 declare var M: any;
-
 @Component({
   selector: 'app-purchase-ticket',
   templateUrl: './purchase-ticket.component.html',
@@ -18,7 +16,7 @@ declare var M: any;
 export class PurchaseTicketComponent implements OnInit {
   user:any;
   ticketDetails:any=null;
-
+  arr:any[];
   qrMsg: String="Sample";
   constructor(
     
@@ -66,7 +64,7 @@ export class PurchaseTicketComponent implements OnInit {
       this.purchaseTicketService.postPurchase(form.value).subscribe((res) => {
         this.flashMessage.show('Purchased', { cssClass: 'alert-success', timeout: 4000 });
         this.resetForm1(form);
-        this.qrMsg = "Start station: "+form.value.start+
+        this.qrMsg =  " Start station:"+form.value.start+
                       " End station: "+form.value.end+
                       " Date: "+form.value.date+
                       " Price: "+form.value.cost+
@@ -74,7 +72,11 @@ export class PurchaseTicketComponent implements OnInit {
                       " class: "+form.value.class ;
 
         this.ticketDetails=this.qrMsg;
-
+        this.arr = ["Start station : " + form.value.start,
+          " End station : " + form.value.end ,
+          " Date : " + form.value.date ,
+          " Price : " + form.value.cost ,
+          " class : " + form.value.class];
         });
   }
 

@@ -5,7 +5,7 @@
 
       <div class="main-login main-center">
         <form #userForm="ngForm" (ngSubmit)="onSubmit(userForm)" method="POST" target="_blank" action="https://sandbox.payhere.lk/pay/checkout" #form>
-          <fieldset><br>
+          <fieldset>
             <legend>Buy Your Ticket Here : </legend>
             <input type="hidden" name="merchant_id" value="1211720">
             <input type="hidden" name="return_url" value="http://sample.com/return">
@@ -90,7 +90,14 @@
         <br>
         <div align="center">
           <qrcode [qrdata]="qrMsg" [size]="250" [level]="'H'"></qrcode>
-          {{ticketDetails}}
+          <div >
+            <ul id="ul1">
+              <li *ngFor="let i of arr">
+                {{i}}
+              </li>
+            </ul>
+          </div>
+          
         </div>
 
       </div>

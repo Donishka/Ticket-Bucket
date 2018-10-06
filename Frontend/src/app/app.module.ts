@@ -40,8 +40,7 @@ import { MapModule } from './modules/map/map.module';
     EditUserModule,
     HeaderBarModule,
     FormsModule,
-    MapModule,
-    QRCodeModule
+    MapModule
 
   ],
   providers: [AuthService],
