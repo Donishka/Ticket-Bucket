@@ -18,6 +18,11 @@ import { EditUserModule } from './modules/user-account/edit-user.module';
 import { AppRoutingModule } from './modules/app-routing.module';
 import { HeaderBarModule } from './modules/header-bar/header-bar.module';
 import { MapModule } from './modules/map/map.module';
+import { JwtModule } from '@auth0/angular-jwt';
+
+export function tokenGetter() {
+  return localStorage.getItem("token");
+}
 
 
 
@@ -40,7 +45,15 @@ import { MapModule } from './modules/map/map.module';
     EditUserModule,
     HeaderBarModule,
     FormsModule,
-    MapModule
+    MapModule,
+    JwtModule.forRoot({
+      config: {
+        tokenGetter: tokenGetter,
+        whitelistedDomains: [],
+        blacklistedRoutes: []
+      }
+    })
+    
 
   ],
   providers: [AuthService],
