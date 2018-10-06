@@ -9,10 +9,19 @@ import { Observable } from 'rxjs';
 })
 export class MapComponent implements OnInit {
 
+  title: string = 'My first AGM project';
+  lat: number = 51.678418;
+  lng: number = 7.809007;
+  qlng: any;
+  qlat: any;
+
   items: Observable<any>;
   
   constructor(private db: AngularFireDatabase) { 
     this.items = db.object('position').valueChanges();
+    this.qlng = db.object('position/longitude').valueChanges();
+    this.qlat = db.object('position/longitude').valueChanges();
+    
     console.log("sdfsadf"+JSON.stringify(this.items));
   }
 

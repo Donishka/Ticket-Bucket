@@ -20,7 +20,8 @@ import { AppRoutingModule } from './modules/app-routing.module';
 import { HeaderBarModule } from './modules/header-bar/header-bar.module';
 import { MapModule } from './modules/map/map.module';
 
-import { AgmCoreModule } from '@agm/core';
+
+
 
 import { QRCodeModule } from 'angularx-qrcode';
 
@@ -45,10 +46,8 @@ import { QRCodeModule } from 'angularx-qrcode';
     HeaderBarModule,
     FormsModule,
     MapModule,
-    AgmCoreModule.forRoot({
-      apiKey: 'AIzaSyA47KAw6KspzlmDSqtmVZodOu212gJwMAw'
-    }),
     QRCodeModule
+    
     
   ],
   providers: [AuthService],
