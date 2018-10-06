@@ -7,7 +7,7 @@
         <form #userForm="ngForm" (ngSubmit)="onSubmit(userForm)" method="POST" target="_blank" action="https://sandbox.payhere.lk/pay/checkout"
           #form>
           <fieldset>
-            <legend>Buy Your Ticket Here : </legend>
+            
             <input type="hidden" name="merchant_id" value="1211720">
             <input type="hidden" name="return_url" value="http://sample.com/return">
             <input type="hidden" name="cancel_url" value="http://sample.com/cancel">
@@ -24,7 +24,7 @@
             <input type="hidden" name="address" value="{{user.address}}">
             <input type="hidden" name="city" value="Colombo">
             <input type="hidden" name="country" value="Sri Lanka">
-
+            <legend>Buy Your Ticket Here : </legend>
             <input type="hidden" name="_id" #_id="ngModel" [(ngModel)]="purchaseTicketService.selectedPurchase._id">
             <div class="form-group">
               <label for="start" class="cols-sm-2 control-label">Start Station</label>
@@ -104,7 +104,7 @@
         <br>
         <div align="center">
           <div *ngIf = "ticketStatus">
-          <qrcode [qrdata]="qrMsg" [size]="250" [level]="'H'"></qrcode>
+          <qrcode [qrdata]="qrMsg" [size]="250" [level]="'L'"></qrcode>
         </div>
           <div>
             <ul id="ul1">
