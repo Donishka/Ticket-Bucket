@@ -21,9 +21,6 @@ import { MapModule } from './modules/map/map.module';
 
 
 
-
-import { QRCodeModule } from 'angularx-qrcode';
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -45,6 +42,7 @@ import { QRCodeModule } from 'angularx-qrcode';
     FormsModule,
     MapModule,
     QRCodeModule
+
   ],
   providers: [AuthService],
   bootstrap: [AppComponent]
