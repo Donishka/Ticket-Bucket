@@ -22,6 +22,8 @@ import { MapModule } from './modules/map/map.module';
 
 import { AgmCoreModule } from '@agm/core';
 
+import { QRCodeModule } from 'angularx-qrcode';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -45,7 +47,8 @@ import { AgmCoreModule } from '@agm/core';
     MapModule,
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyA47KAw6KspzlmDSqtmVZodOu212gJwMAw'
-    })
+    }),
+    QRCodeModule
     
   ],
   providers: [AuthService],
