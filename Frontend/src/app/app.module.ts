@@ -17,11 +17,17 @@ import { UserAccountModule } from './modules/user-account/user-account.module';
 import { EditUserModule } from './modules/user-account/edit-user.module';
 import { AppRoutingModule } from './modules/app-routing.module';
 import { HeaderBarModule } from './modules/header-bar/header-bar.module';
+import { MapModule } from './modules/map/map.module';
+
+import { AgmCoreModule } from '@agm/core';
+
+import { QRCodeModule } from 'angularx-qrcode';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
+
   ],
   imports: [
     BrowserModule,
@@ -35,7 +41,13 @@ import { HeaderBarModule } from './modules/header-bar/header-bar.module';
     UserAccountModule,
     EditUserModule,
     HeaderBarModule,
-    FormsModule   
+    FormsModule,
+    MapModule,
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyA47KAw6KspzlmDSqtmVZodOu212gJwMAw'
+    }),
+    QRCodeModule
+
   ],
   providers: [AuthService],
   bootstrap: [AppComponent]
