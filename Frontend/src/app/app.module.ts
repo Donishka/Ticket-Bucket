@@ -18,6 +18,7 @@ import { EditUserModule } from './modules/user-account/edit-user.module';
 import { AppRoutingModule } from './modules/app-routing.module';
 import { HeaderBarModule } from './modules/header-bar/header-bar.module';
 import { MapModule } from './modules/map/map.module';
+import { TrainFeesComponent } from './components/train-fees/train-fees.component';
 
 
 
@@ -25,6 +26,7 @@ import { MapModule } from './modules/map/map.module';
   declarations: [
     AppComponent,
     HomeComponent,
+    TrainFeesComponent,
 
   ],
   imports: [

@@ -20,6 +20,9 @@ var Purchase = mongoose.model('Purchases', {
     time: {
         type: String,
     },
+    qty: {
+        type: String,
+    },
     buyerid: {
         type: String,
     },

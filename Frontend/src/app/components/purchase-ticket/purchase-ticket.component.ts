@@ -41,6 +41,7 @@ export class PurchaseTicketComponent implements OnInit {
       time: "",
       class: "",
       cost: "",
+      qty:"",
       buyerid: "",
 
     }
@@ -55,6 +56,7 @@ export class PurchaseTicketComponent implements OnInit {
         time: "",
         class: "",
         cost: "",
+        qty:"",
         buyerid: "",
       }
   }
@@ -69,14 +71,16 @@ export class PurchaseTicketComponent implements OnInit {
                       " Date: "+form.value.date+
                       " Price: "+form.value.cost+
                       " id: "+form.value.buyerid+
-                      " class: "+form.value.class ;
+                      " class: "+form.value.class
+                      " Qty: " + form.value.qty ;
 
         this.ticketDetails=this.qrMsg;
         this.arr = ["Start station : " + form.value.start,
           " End station : " + form.value.end ,
           " Date : " + form.value.date ,
           " Price : " + form.value.cost ,
-          " class : " + form.value.class];
+          " class : " + form.value.class,
+          " Qty: " + form.value.qty];
         });
   }
 

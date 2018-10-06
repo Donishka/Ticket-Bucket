@@ -22,9 +22,10 @@ router.post('/', (req, res) => {
         class: req.body.class,
         cost:req.body.cost,
         time: req.body.time,
+        qty:req.body.qty,
         buyerid: req.body.buyerid,
-
     });
+    
     purchase.save(purchase, (err, doc) => {
         if (err) {
             res.json({ state: false, msg: "data not inserted" });

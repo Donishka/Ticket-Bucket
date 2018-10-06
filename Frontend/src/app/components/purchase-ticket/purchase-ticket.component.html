@@ -1,10 +1,11 @@
-<div class ='container-fluid'>
-  <div class = 'row'>
+<div class='container-fluid'>
+  <div class='row'>
 
-    <div class ='col col_2' style="background-color:ivory;">
+    <div class='col col_2' style="background-color:ivory;">
 
       <div class="main-login main-center">
-        <form #userForm="ngForm" (ngSubmit)="onSubmit(userForm)" method="POST" target="_blank" action="https://sandbox.payhere.lk/pay/checkout" #form>
+        <form #userForm="ngForm" (ngSubmit)="onSubmit(userForm)" method="POST" target="_blank" action="https://sandbox.payhere.lk/pay/checkout"
+          #form>
           <fieldset>
             <legend>Buy Your Ticket Here : </legend>
             <input type="hidden" name="merchant_id" value="1211720">
@@ -15,7 +16,7 @@
             <input type="hidden" name="items" value="Train Ticket"><br>
             <input type="hidden" name="currency" value="LKR">
             <input type="text" name="amount" value="135">
-            
+
             <input type="hidden" name="first_name" value="{{user.fname}}">
             <input type="hidden" name="last_name" value="{{user.lname}}"><br>
             <input type="hidden" name="email" value="{{user.email}}">
@@ -24,13 +25,14 @@
             <input type="hidden" name="city" value="Colombo">
             <input type="hidden" name="country" value="Sri Lanka">
 
-            <input type="hidden" name="_id" #_id="ngModel" [(ngModel)]="purchaseTicketService.selectedPurchase._id">           
+            <input type="hidden" name="_id" #_id="ngModel" [(ngModel)]="purchaseTicketService.selectedPurchase._id">
             <div class="form-group">
               <label for="start" class="cols-sm-2 control-label">Start Station</label>
               <div class="cols-sm-10">
                 <div class="input-group">
                   <span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
-                  <input type="text" class="form-control" name="start" #name="ngModel" [(ngModel)]="purchaseTicketService.selectedPurchase.start" required         >
+                  <input type="text" class="form-control" name="start" #name="ngModel" [(ngModel)]="purchaseTicketService.selectedPurchase.start"
+                    required>
                 </div>
               </div>
             </div>
@@ -62,46 +64,57 @@
                 </div>
               </div>
             </div>
-            
+
+            <div class="form-group">
+              <label for="qty" class="cols-sm-2 control-label">Quantity</label>
+              <div class="cols-sm-10">
+                <div class="input-group">
+                  <span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
+                  <input type="number" class="form-control" name="qty" #name="ngModel" [(ngModel)]="purchaseTicketService.selectedPurchase.qty">
+                </div>
+              </div>
+            </div>
+
             <div class="form-group">
               <input type="hidden" class="form-control" name="time" #name="ngModel" value="22.05" [(ngModel)]="purchaseTicketService.selectedPurchase.time">
-            </div>           
+            </div>
             <div class="form-group">
               <input type="hidden" class="form-control" name="cost" #name="ngModel" [(ngModel)]="purchaseTicketService.selectedPurchase.cost">
             </div>
             <div class="form-group">
-              <input type="hidden" class="form-control" name="buyerid"  #name="ngModel" [(ngModel)]="user._id">  
+              <input type="hidden" class="form-control" name="buyerid" #name="ngModel" [(ngModel)]="user._id">
             </div>
             <flash-messages></flash-messages>
             <div class="form-group ">
-              <button class="btn btn-primary btn-lg btn-block login-button" type="submit" (click)="form.submit()" [disabled]="!userForm.valid">Pay Online</button>
-              <button class="btn btn-primary btn-lg btn-block login-button" [disabled]="!userForm.valid">Pay with Ez Cash</button>
+              <button class="btn btn-primary btn-lg btn-block login-button" type="submit" (click)="form.submit()"
+                [disabled]="!userForm.valid">Pay Online</button>
+              <button class="btn btn-primary btn-lg btn-block login-button" [disabled]="!userForm.valid">Pay with Ez
+                Cash</button>
               <button class="btn btn-primary btn-lg btn-block login-button" type="button" (click)="resetForm(userForm)">Reset</button>
             </div>
           </fieldset>
         </form>
       </div>
-      </div>
-      <div class ='col col_2' style="background-color:rosybrown;">
-        <div class="main-login main-center"><br>
-          <button class="btn btn-primary btn-lg btn-block login-button" >Get Live Location</button>
-          <button class="btn btn-primary btn-lg btn-block login-button" >Train Shedule</button>
+    </div>
+    <div class='col col_2' style="background-color:rosybrown;">
+      <div class="main-login main-center"><br>
+        <button class="btn btn-primary btn-lg btn-block login-button" [routerLink]="['/view-map']">Get Live Location</button>
+        <button class="btn btn-primary btn-lg btn-block login-button">Train Shedule</button>
+        <button class="btn btn-primary btn-lg btn-block login-button">Price List</button>
         <br>
         <br>
         <div align="center">
           <qrcode [qrdata]="qrMsg" [size]="250" [level]="'H'"></qrcode>
-          <div >
+          <div>
             <ul id="ul1">
               <li *ngFor="let i of arr">
                 {{i}}
               </li>
             </ul>
           </div>
-          
+
         </div>
 
       </div>
     </div>
   </div>
-  
-     
