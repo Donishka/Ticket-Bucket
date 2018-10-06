@@ -4,7 +4,6 @@ import { FlashMessagesService } from 'angular2-flash-messages';
 import { Router } from '@angular/router';
 import { AuthService } from '../../services/auth.service';
 
-
 import { PurchaseTicketService } from '../../services/purchase-ticket-service/purchase-ticket.service';
 
 declare var M: any;
@@ -15,6 +14,7 @@ declare var M: any;
   styleUrls: ['./purchase-ticket.component.css'],
   providers:[PurchaseTicketService]
 })
+
 export class PurchaseTicketComponent implements OnInit {
   selected: string;
   states: string[] = [
