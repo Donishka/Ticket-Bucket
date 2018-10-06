@@ -8,6 +8,7 @@ import { AddNewUserComponent } from '../components/user/add-new-user/add-new-use
 import { UserAccountComponent } from '../components/user/user-account/user-account.component';
 import { EditUserComponent } from '../components/user/edit-user/edit-user.component';
 import { MapComponent } from '../components/map/map.component';
+import { TrainFeesComponent } from '../components/train-fees/train-fees.component';
 
 const applicationRoutes:Routes = [
   {path:'login',component:LoginComponent},
@@ -15,7 +16,8 @@ const applicationRoutes:Routes = [
   {path:'addnewuser',component:AddNewUserComponent},
   {path:'edituser',component:EditUserComponent,canActivate: [AuthGuard]},
   {path:'user-account',component:UserAccountComponent,canActivate: [AuthGuard]},
-  {path:'view-map',component:MapComponent}
+  {path:'view-map',component:MapComponent},
+  {path:'train-fee',component: TrainFeesComponent }
 
 ];
 
