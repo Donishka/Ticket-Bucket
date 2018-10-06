@@ -6,6 +6,8 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { PurchaseTicketComponent } from '../../../app/components/purchase-ticket/purchase-ticket.component';
 import { TrainFeesComponent } from '../../components/train-fees/train-fees.component';
+import { ViewPurchasesComponent } from '../../components/view-purchases/view-purchases.component';
+
 import { QRCodeModule } from 'angularx-qrcode';
 
 @NgModule({
@@ -17,8 +19,8 @@ import { QRCodeModule } from 'angularx-qrcode';
     QRCodeModule,
     
   ],
-  declarations: [PurchaseTicketComponent, TrainFeesComponent
+  declarations: [PurchaseTicketComponent, TrainFeesComponent, ViewPurchasesComponent
   ],
-  exports: [PurchaseTicketComponent, TrainFeesComponent],
+  exports: [PurchaseTicketComponent, TrainFeesComponent, ViewPurchasesComponent],
 })
 export class PaymentsModule { }

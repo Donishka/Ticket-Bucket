@@ -28,7 +28,7 @@ router.post('/', (req, res) => {
         end: req.body.end,
         date: req.body.date,
         class: req.body.class,
-        cost:req.body.cost,
+        cost:"135",
         time: req.body.time,
         qty:req.body.qty,
         buyerid: req.body.buyerid,

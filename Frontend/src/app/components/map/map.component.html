@@ -24,26 +24,20 @@
             <th>Latitude</th>
             <th>More details</th>
           </tr>
-          <tr >
+          <tr>
             <td>{{(items | async)?.UserName}}</td>
             <td>{{(items | async)?.longitude}}</td>
             <td>{{(items | async)?.latitude}}</td>
-            <td><button  type="button" class="btn btn-danger">Click me</button></td>
+            <td><button class="btn btn-danger" onclick="window.location.reload()">Click me</button></td>
           </tr>
         </table>
-        </div>
-        <input type="text" value="{{(qlng | async)}}">
+      </div>
       <div class="main-login main-center">
       </div>
     </div>
     <div class="col-lg-6" style="background-color:rosybrown;">
-      <div class="main-login main-center"><br>       
+      <div class="main-login main-center"><br>
         <div id="map"></div>
       </div>
     </div>
   </div>
-
-
-
-
-
