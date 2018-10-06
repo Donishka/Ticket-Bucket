@@ -71,7 +71,7 @@ export class PurchaseTicketComponent implements OnInit {
                       " Date: "+form.value.date+
                       " Price: "+form.value.cost+
                       " id: "+form.value.buyerid+
-                      " class: "+form.value.class
+                      " class: "+form.value.class+
                       " Qty: " + form.value.qty ;
 
         this.ticketDetails=this.qrMsg;

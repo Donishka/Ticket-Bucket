@@ -5,7 +5,7 @@ import { FlashMessagesModule } from 'angular2-flash-messages';
 import { RouterModule, Routes } from '@angular/router';
 
 import { PurchaseTicketComponent } from '../../../app/components/purchase-ticket/purchase-ticket.component';
-
+import { TrainFeesComponent } from '../../components/train-fees/train-fees.component';
 import { QRCodeModule } from 'angularx-qrcode';
 
 @NgModule({
@@ -14,9 +14,11 @@ import { QRCodeModule } from 'angularx-qrcode';
     FormsModule,
     FlashMessagesModule,
     RouterModule,
-    QRCodeModule
+    QRCodeModule,
+    
   ],
-  declarations: [PurchaseTicketComponent],
-  exports: [PurchaseTicketComponent],
+  declarations: [PurchaseTicketComponent, TrainFeesComponent
+  ],
+  exports: [PurchaseTicketComponent, TrainFeesComponent],
 })
 export class PaymentsModule { }
