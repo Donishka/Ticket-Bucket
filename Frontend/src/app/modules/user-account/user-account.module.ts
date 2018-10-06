@@ -6,6 +6,8 @@ import { RouterModule, Routes }  from '@angular/router';
 
 import { UserAccountComponent } from '../../components/user/user-account/user-account.component';
 import { HeaderBarModule } from '../header-bar/header-bar.module';
+import { PaymentsModule } from '../payments/payments.module';
+
 
 @NgModule({
   imports: [
@@ -13,9 +15,8 @@ import { HeaderBarModule } from '../header-bar/header-bar.module';
     FormsModule,
     FlashMessagesModule,
     RouterModule,
-    HeaderBarModule
-    
-    
+    HeaderBarModule,
+    PaymentsModule
  ],
   declarations: [
     UserAccountComponent
